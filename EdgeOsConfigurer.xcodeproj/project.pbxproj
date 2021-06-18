@@ -15,6 +15,10 @@
 		2D4088F7267CC87F00B6C134 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4088CC267CC87E00B6C134 /* ContentView.swift */; };
 		2D4088F8267CC87F00B6C134 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D4088CD267CC87F00B6C134 /* Assets.xcassets */; };
 		2D4088F9267CC87F00B6C134 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D4088CD267CC87F00B6C134 /* Assets.xcassets */; };
+		2D408909267CCA2F00B6C134 /* OrangeAccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D408908267CCA2F00B6C134 /* OrangeAccountModel.swift */; };
+		2D40890A267CCA2F00B6C134 /* OrangeAccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D408908267CCA2F00B6C134 /* OrangeAccountModel.swift */; };
+		2D40890C267CCC0B00B6C134 /* OrangeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D40890B267CCC0B00B6C134 /* OrangeService.swift */; };
+		2D40890D267CCC0B00B6C134 /* OrangeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D40890B267CCC0B00B6C134 /* OrangeService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,8 @@
 		2D4088ED267CC87F00B6C134 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D4088F1267CC87F00B6C134 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		2D4088F3267CC87F00B6C134 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D408908267CCA2F00B6C134 /* OrangeAccountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrangeAccountModel.swift; sourceTree = "<group>"; };
+		2D40890B267CCC0B00B6C134 /* OrangeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrangeService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +107,8 @@
 				2D4088CB267CC87E00B6C134 /* EdgeOsConfigurerApp.swift */,
 				2D4088CC267CC87E00B6C134 /* ContentView.swift */,
 				2D4088CD267CC87F00B6C134 /* Assets.xcassets */,
+				2D408908267CCA2F00B6C134 /* OrangeAccountModel.swift */,
+				2D40890B267CCC0B00B6C134 /* OrangeService.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -308,8 +316,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D408909267CCA2F00B6C134 /* OrangeAccountModel.swift in Sources */,
 				2D4088F6267CC87F00B6C134 /* ContentView.swift in Sources */,
 				2D4088F4267CC87F00B6C134 /* EdgeOsConfigurerApp.swift in Sources */,
+				2D40890C267CCC0B00B6C134 /* OrangeService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,8 +327,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D40890A267CCA2F00B6C134 /* OrangeAccountModel.swift in Sources */,
 				2D4088F7267CC87F00B6C134 /* ContentView.swift in Sources */,
 				2D4088F5267CC87F00B6C134 /* EdgeOsConfigurerApp.swift in Sources */,
+				2D40890D267CCC0B00B6C134 /* OrangeService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
