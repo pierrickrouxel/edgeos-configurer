@@ -1,0 +1,691 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2D4088E7267CC87F00B6C134 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4088E6267CC87F00B6C134 /* Tests_iOS.swift */; };
+		2D4088F2267CC87F00B6C134 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4088F1267CC87F00B6C134 /* Tests_macOS.swift */; };
+		2D4088F4267CC87F00B6C134 /* EdgeOsConfigurerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4088CB267CC87E00B6C134 /* EdgeOsConfigurerApp.swift */; };
+		2D4088F5267CC87F00B6C134 /* EdgeOsConfigurerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4088CB267CC87E00B6C134 /* EdgeOsConfigurerApp.swift */; };
+		2D4088F6267CC87F00B6C134 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4088CC267CC87E00B6C134 /* ContentView.swift */; };
+		2D4088F7267CC87F00B6C134 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4088CC267CC87E00B6C134 /* ContentView.swift */; };
+		2D4088F8267CC87F00B6C134 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D4088CD267CC87F00B6C134 /* Assets.xcassets */; };
+		2D4088F9267CC87F00B6C134 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D4088CD267CC87F00B6C134 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2D4088E3267CC87F00B6C134 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2D4088C6267CC87D00B6C134 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2D4088D1267CC87F00B6C134;
+			remoteInfo = "EdgeOsConfigurer (iOS)";
+		};
+		2D4088EE267CC87F00B6C134 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2D4088C6267CC87D00B6C134 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2D4088D9267CC87F00B6C134;
+			remoteInfo = "EdgeOsConfigurer (macOS)";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2D4088CB267CC87E00B6C134 /* EdgeOsConfigurerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgeOsConfigurerApp.swift; sourceTree = "<group>"; };
+		2D4088CC267CC87E00B6C134 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2D4088CD267CC87F00B6C134 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2D4088D2267CC87F00B6C134 /* EdgeOsConfigurer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EdgeOsConfigurer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D4088D5267CC87F00B6C134 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D4088DA267CC87F00B6C134 /* EdgeOsConfigurer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EdgeOsConfigurer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D4088DC267CC87F00B6C134 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D4088DD267CC87F00B6C134 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		2D4088E2267CC87F00B6C134 /* Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D4088E6267CC87F00B6C134 /* Tests_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOS.swift; sourceTree = "<group>"; };
+		2D4088E8267CC87F00B6C134 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D4088ED267CC87F00B6C134 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D4088F1267CC87F00B6C134 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
+		2D4088F3267CC87F00B6C134 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2D4088CF267CC87F00B6C134 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D4088D7267CC87F00B6C134 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D4088DF267CC87F00B6C134 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D4088EA267CC87F00B6C134 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2D4088C5267CC87D00B6C134 = {
+			isa = PBXGroup;
+			children = (
+				2D4088CA267CC87D00B6C134 /* Shared */,
+				2D4088D4267CC87F00B6C134 /* iOS */,
+				2D4088DB267CC87F00B6C134 /* macOS */,
+				2D4088E5267CC87F00B6C134 /* Tests iOS */,
+				2D4088F0267CC87F00B6C134 /* Tests macOS */,
+				2D4088D3267CC87F00B6C134 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2D4088CA267CC87D00B6C134 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				2D4088CB267CC87E00B6C134 /* EdgeOsConfigurerApp.swift */,
+				2D4088CC267CC87E00B6C134 /* ContentView.swift */,
+				2D4088CD267CC87F00B6C134 /* Assets.xcassets */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		2D4088D3267CC87F00B6C134 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2D4088D2267CC87F00B6C134 /* EdgeOsConfigurer.app */,
+				2D4088DA267CC87F00B6C134 /* EdgeOsConfigurer.app */,
+				2D4088E2267CC87F00B6C134 /* Tests iOS.xctest */,
+				2D4088ED267CC87F00B6C134 /* Tests macOS.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2D4088D4267CC87F00B6C134 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				2D4088D5267CC87F00B6C134 /* Info.plist */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		2D4088DB267CC87F00B6C134 /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				2D4088DC267CC87F00B6C134 /* Info.plist */,
+				2D4088DD267CC87F00B6C134 /* macOS.entitlements */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		2D4088E5267CC87F00B6C134 /* Tests iOS */ = {
+			isa = PBXGroup;
+			children = (
+				2D4088E6267CC87F00B6C134 /* Tests_iOS.swift */,
+				2D4088E8267CC87F00B6C134 /* Info.plist */,
+			);
+			path = "Tests iOS";
+			sourceTree = "<group>";
+		};
+		2D4088F0267CC87F00B6C134 /* Tests macOS */ = {
+			isa = PBXGroup;
+			children = (
+				2D4088F1267CC87F00B6C134 /* Tests_macOS.swift */,
+				2D4088F3267CC87F00B6C134 /* Info.plist */,
+			);
+			path = "Tests macOS";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2D4088D1267CC87F00B6C134 /* EdgeOsConfigurer (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2D4088FC267CC87F00B6C134 /* Build configuration list for PBXNativeTarget "EdgeOsConfigurer (iOS)" */;
+			buildPhases = (
+				2D4088CE267CC87F00B6C134 /* Sources */,
+				2D4088CF267CC87F00B6C134 /* Frameworks */,
+				2D4088D0267CC87F00B6C134 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "EdgeOsConfigurer (iOS)";
+			productName = "EdgeOsConfigurer (iOS)";
+			productReference = 2D4088D2267CC87F00B6C134 /* EdgeOsConfigurer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2D4088D9267CC87F00B6C134 /* EdgeOsConfigurer (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2D4088FF267CC87F00B6C134 /* Build configuration list for PBXNativeTarget "EdgeOsConfigurer (macOS)" */;
+			buildPhases = (
+				2D4088D6267CC87F00B6C134 /* Sources */,
+				2D4088D7267CC87F00B6C134 /* Frameworks */,
+				2D4088D8267CC87F00B6C134 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "EdgeOsConfigurer (macOS)";
+			productName = "EdgeOsConfigurer (macOS)";
+			productReference = 2D4088DA267CC87F00B6C134 /* EdgeOsConfigurer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2D4088E1267CC87F00B6C134 /* Tests iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2D408902267CC87F00B6C134 /* Build configuration list for PBXNativeTarget "Tests iOS" */;
+			buildPhases = (
+				2D4088DE267CC87F00B6C134 /* Sources */,
+				2D4088DF267CC87F00B6C134 /* Frameworks */,
+				2D4088E0267CC87F00B6C134 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2D4088E4267CC87F00B6C134 /* PBXTargetDependency */,
+			);
+			name = "Tests iOS";
+			productName = "Tests iOS";
+			productReference = 2D4088E2267CC87F00B6C134 /* Tests iOS.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		2D4088EC267CC87F00B6C134 /* Tests macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2D408905267CC87F00B6C134 /* Build configuration list for PBXNativeTarget "Tests macOS" */;
+			buildPhases = (
+				2D4088E9267CC87F00B6C134 /* Sources */,
+				2D4088EA267CC87F00B6C134 /* Frameworks */,
+				2D4088EB267CC87F00B6C134 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2D4088EF267CC87F00B6C134 /* PBXTargetDependency */,
+			);
+			name = "Tests macOS";
+			productName = "Tests macOS";
+			productReference = 2D4088ED267CC87F00B6C134 /* Tests macOS.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2D4088C6267CC87D00B6C134 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					2D4088D1267CC87F00B6C134 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					2D4088D9267CC87F00B6C134 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					2D4088E1267CC87F00B6C134 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 2D4088D1267CC87F00B6C134;
+					};
+					2D4088EC267CC87F00B6C134 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 2D4088D9267CC87F00B6C134;
+					};
+				};
+			};
+			buildConfigurationList = 2D4088C9267CC87D00B6C134 /* Build configuration list for PBXProject "EdgeOsConfigurer" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2D4088C5267CC87D00B6C134;
+			productRefGroup = 2D4088D3267CC87F00B6C134 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2D4088D1267CC87F00B6C134 /* EdgeOsConfigurer (iOS) */,
+				2D4088D9267CC87F00B6C134 /* EdgeOsConfigurer (macOS) */,
+				2D4088E1267CC87F00B6C134 /* Tests iOS */,
+				2D4088EC267CC87F00B6C134 /* Tests macOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2D4088D0267CC87F00B6C134 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D4088F8267CC87F00B6C134 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D4088D8267CC87F00B6C134 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D4088F9267CC87F00B6C134 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D4088E0267CC87F00B6C134 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D4088EB267CC87F00B6C134 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2D4088CE267CC87F00B6C134 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D4088F6267CC87F00B6C134 /* ContentView.swift in Sources */,
+				2D4088F4267CC87F00B6C134 /* EdgeOsConfigurerApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D4088D6267CC87F00B6C134 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D4088F7267CC87F00B6C134 /* ContentView.swift in Sources */,
+				2D4088F5267CC87F00B6C134 /* EdgeOsConfigurerApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D4088DE267CC87F00B6C134 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D4088E7267CC87F00B6C134 /* Tests_iOS.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D4088E9267CC87F00B6C134 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D4088F2267CC87F00B6C134 /* Tests_macOS.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2D4088E4267CC87F00B6C134 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2D4088D1267CC87F00B6C134 /* EdgeOsConfigurer (iOS) */;
+			targetProxy = 2D4088E3267CC87F00B6C134 /* PBXContainerItemProxy */;
+		};
+		2D4088EF267CC87F00B6C134 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2D4088D9267CC87F00B6C134 /* EdgeOsConfigurer (macOS) */;
+			targetProxy = 2D4088EE267CC87F00B6C134 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2D4088FA267CC87F00B6C134 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2D4088FB267CC87F00B6C134 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		2D4088FD267CC87F00B6C134 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = fr.pierrickrouxel.EdgeOsConfigurer;
+				PRODUCT_NAME = EdgeOsConfigurer;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2D4088FE267CC87F00B6C134 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = fr.pierrickrouxel.EdgeOsConfigurer;
+				PRODUCT_NAME = EdgeOsConfigurer;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2D408900267CC87F00B6C134 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = macOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = fr.pierrickrouxel.EdgeOsConfigurer;
+				PRODUCT_NAME = EdgeOsConfigurer;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		2D408901267CC87F00B6C134 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = macOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = fr.pierrickrouxel.EdgeOsConfigurer;
+				PRODUCT_NAME = EdgeOsConfigurer;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		2D408903267CC87F00B6C134 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Tests iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "fr.pierrickrouxel.Tests-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "EdgeOsConfigurer (iOS)";
+			};
+			name = Debug;
+		};
+		2D408904267CC87F00B6C134 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Tests iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "fr.pierrickrouxel.Tests-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "EdgeOsConfigurer (iOS)";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2D408906267CC87F00B6C134 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Tests macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				PRODUCT_BUNDLE_IDENTIFIER = "fr.pierrickrouxel.Tests-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "EdgeOsConfigurer (macOS)";
+			};
+			name = Debug;
+		};
+		2D408907267CC87F00B6C134 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Tests macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				PRODUCT_BUNDLE_IDENTIFIER = "fr.pierrickrouxel.Tests-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "EdgeOsConfigurer (macOS)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D4088C9267CC87D00B6C134 /* Build configuration list for PBXProject "EdgeOsConfigurer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D4088FA267CC87F00B6C134 /* Debug */,
+				2D4088FB267CC87F00B6C134 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D4088FC267CC87F00B6C134 /* Build configuration list for PBXNativeTarget "EdgeOsConfigurer (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D4088FD267CC87F00B6C134 /* Debug */,
+				2D4088FE267CC87F00B6C134 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D4088FF267CC87F00B6C134 /* Build configuration list for PBXNativeTarget "EdgeOsConfigurer (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D408900267CC87F00B6C134 /* Debug */,
+				2D408901267CC87F00B6C134 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D408902267CC87F00B6C134 /* Build configuration list for PBXNativeTarget "Tests iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D408903267CC87F00B6C134 /* Debug */,
+				2D408904267CC87F00B6C134 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D408905267CC87F00B6C134 /* Build configuration list for PBXNativeTarget "Tests macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D408906267CC87F00B6C134 /* Debug */,
+				2D408907267CC87F00B6C134 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2D4088C6267CC87D00B6C134 /* Project object */;
+}
