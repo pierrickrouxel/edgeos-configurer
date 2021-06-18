@@ -11,12 +11,24 @@ struct ContentView: View {
     @ObservedObject private var orangeAccountModel = OrangeAccountModel()
     
     var body: some View {
-        TextField("Login fti/xxx", text: $orangeAccountModel.login).padding();
-        TextField("Password", text: $orangeAccountModel.password).padding();
-        TextField("Salt", text: $orangeAccountModel.salt).padding();
-        TextField("Byte", text: $orangeAccountModel.byte).padding();
-        Button("Generate", action: generate)
-        TextField("Result", text: $orangeAccountModel.option90).disabled(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
+        Form {
+            ScrollView {
+                TextField("Login (starts with fti/)", text: $orangeAccountModel.login);
+                TextField("Password", text: $orangeAccountModel.password)
+                TextField("Salt", text: $orangeAccountModel.salt)
+                TextField("Byte", text: $orangeAccountModel.byte)
+                Button("Generate", action: generate)
+                Section(header: Text("DHCP Option 90")) {
+                    Button("Copy", action: {
+                        NSPasteboard.general.clearContents()
+                        NSPasteboard.general.setString(orangeAccountModel.option90, forType: .string)
+                    })
+                    Text(orangeAccountModel.option90)
+                        .fixedSize(horizontal: false, vertical: true)
+                        .padding()
+                }
+            }
+        }
     }
     
     func generate() {

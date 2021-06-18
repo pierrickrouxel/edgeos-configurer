@@ -16,7 +16,6 @@ class OrangeService {
     static var fixed = "1a:09:00:00:05:58:01:03:41"
     
     static func generateOption90(orangeAccount: OrangeAccountModel) -> String {
-        let fullLogin = "fti/\(orangeAccount.login)"
         
         let digest = Insecure.MD5.hash(data: "\(orangeAccount.byte)\(orangeAccount.password)\(orangeAccount.salt)".data(using: .utf8) ?? Data())
 
@@ -34,7 +33,7 @@ class OrangeService {
             }
         }
         let value = st11zero + ":" + fixed + ":" +
-            tlOfTls(id: idorange, l: 2 + fullLogin.count) + ":" + sOfTls(s: fullLogin) + ":" +
+            tlOfTls(id: idorange, l: 2 + orangeAccount.login.count) + ":" + sOfTls(s: orangeAccount.login) + ":" +
             tlOfTls(id: idsalt, l: 2 + 16) + ":" + sOfTls(s: orangeAccount.salt) + ":" +
             tlOfTls(id: idhash, l: 2 + 1 + 16) + ":" + sOfTls(s: orangeAccount.byte) + ":" + md5s
         return value
