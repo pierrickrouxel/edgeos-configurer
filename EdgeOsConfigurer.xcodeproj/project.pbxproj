@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,6 +19,10 @@
 		2D40890A267CCA2F00B6C134 /* OrangeAccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D408908267CCA2F00B6C134 /* OrangeAccountModel.swift */; };
 		2D40890C267CCC0B00B6C134 /* OrangeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D40890B267CCC0B00B6C134 /* OrangeService.swift */; };
 		2D40890D267CCC0B00B6C134 /* OrangeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D40890B267CCC0B00B6C134 /* OrangeService.swift */; };
+		2D408910267CEF7200B6C134 /* Shout in Frameworks */ = {isa = PBXBuildFile; productRef = 2D40890F267CEF7200B6C134 /* Shout */; };
+		2D408912267CEF9D00B6C134 /* EdgeOsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D408911267CEF9D00B6C134 /* EdgeOsService.swift */; };
+		2D408913267CEF9D00B6C134 /* EdgeOsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D408911267CEF9D00B6C134 /* EdgeOsService.swift */; };
+		2D408916267CF53B00B6C134 /* Shout in Frameworks */ = {isa = PBXBuildFile; productRef = 2D408915267CF53B00B6C134 /* Shout */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +59,8 @@
 		2D4088F3267CC87F00B6C134 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D408908267CCA2F00B6C134 /* OrangeAccountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrangeAccountModel.swift; sourceTree = "<group>"; };
 		2D40890B267CCC0B00B6C134 /* OrangeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrangeService.swift; sourceTree = "<group>"; };
+		2D408911267CEF9D00B6C134 /* EdgeOsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgeOsService.swift; sourceTree = "<group>"; };
+		2DD71114267CFCFC0056A974 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D408910267CEF7200B6C134 /* Shout in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D408916267CF53B00B6C134 /* Shout in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,12 +100,14 @@
 		2D4088C5267CC87D00B6C134 = {
 			isa = PBXGroup;
 			children = (
+				2DD71114267CFCFC0056A974 /* README.md */,
 				2D4088CA267CC87D00B6C134 /* Shared */,
 				2D4088D4267CC87F00B6C134 /* iOS */,
 				2D4088DB267CC87F00B6C134 /* macOS */,
 				2D4088E5267CC87F00B6C134 /* Tests iOS */,
 				2D4088F0267CC87F00B6C134 /* Tests macOS */,
 				2D4088D3267CC87F00B6C134 /* Products */,
+				2D408914267CF53B00B6C134 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,6 +119,7 @@
 				2D4088CD267CC87F00B6C134 /* Assets.xcassets */,
 				2D408908267CCA2F00B6C134 /* OrangeAccountModel.swift */,
 				2D40890B267CCC0B00B6C134 /* OrangeService.swift */,
+				2D408911267CEF9D00B6C134 /* EdgeOsService.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -159,6 +170,13 @@
 			path = "Tests macOS";
 			sourceTree = "<group>";
 		};
+		2D408914267CF53B00B6C134 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -175,6 +193,9 @@
 			dependencies = (
 			);
 			name = "EdgeOsConfigurer (iOS)";
+			packageProductDependencies = (
+				2D40890F267CEF7200B6C134 /* Shout */,
+			);
 			productName = "EdgeOsConfigurer (iOS)";
 			productReference = 2D4088D2267CC87F00B6C134 /* EdgeOsConfigurer.app */;
 			productType = "com.apple.product-type.application";
@@ -192,6 +213,9 @@
 			dependencies = (
 			);
 			name = "EdgeOsConfigurer (macOS)";
+			packageProductDependencies = (
+				2D408915267CF53B00B6C134 /* Shout */,
+			);
 			productName = "EdgeOsConfigurer (macOS)";
 			productReference = 2D4088DA267CC87F00B6C134 /* EdgeOsConfigurer.app */;
 			productType = "com.apple.product-type.application";
@@ -266,6 +290,9 @@
 				Base,
 			);
 			mainGroup = 2D4088C5267CC87D00B6C134;
+			packageReferences = (
+				2D40890E267CEF7200B6C134 /* XCRemoteSwiftPackageReference "Shout" */,
+			);
 			productRefGroup = 2D4088D3267CC87F00B6C134 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -320,6 +347,7 @@
 				2D4088F6267CC87F00B6C134 /* ContentView.swift in Sources */,
 				2D4088F4267CC87F00B6C134 /* EdgeOsConfigurerApp.swift in Sources */,
 				2D40890C267CCC0B00B6C134 /* OrangeService.swift in Sources */,
+				2D408912267CEF9D00B6C134 /* EdgeOsService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,6 +359,7 @@
 				2D4088F7267CC87F00B6C134 /* ContentView.swift in Sources */,
 				2D4088F5267CC87F00B6C134 /* EdgeOsConfigurerApp.swift in Sources */,
 				2D40890D267CCC0B00B6C134 /* OrangeService.swift in Sources */,
+				2D408913267CEF9D00B6C134 /* EdgeOsService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -698,6 +727,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2D40890E267CEF7200B6C134 /* XCRemoteSwiftPackageReference "Shout" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jakeheis/Shout";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.5.7;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2D40890F267CEF7200B6C134 /* Shout */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2D40890E267CEF7200B6C134 /* XCRemoteSwiftPackageReference "Shout" */;
+			productName = Shout;
+		};
+		2D408915267CF53B00B6C134 /* Shout */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2D40890E267CEF7200B6C134 /* XCRemoteSwiftPackageReference "Shout" */;
+			productName = Shout;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2D4088C6267CC87D00B6C134 /* Project object */;
 }
