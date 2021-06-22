@@ -12,6 +12,8 @@ struct EdgeOsConfigurerApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .edgesIgnoringSafeArea(.top)
         }
+        .windowStyle(HiddenTitleBarWindowStyle())
     }
 }
