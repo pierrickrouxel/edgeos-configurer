@@ -28,10 +28,10 @@ class EdgeOsClient {
         try ssh?.authenticate(username: username, password: password)
     }
     
-    func showInterfaces() throws -> String {
+    func showInterfaces() throws -> [String] {
         let interfacesOutput = try execute("vbash -ic \"show interfaces\"")
         
-        return interfacesOutput
+        return parseLines(interfacesOutput)
     }
     
     private func execute(_ command: String) throws -> String {
@@ -46,5 +46,37 @@ class EdgeOsClient {
         }
         
         return output
+    }
+    
+    private func parseLines(_ output: String) -> [String] {
+        let lines = output.components(separatedBy: "\n").dropFirst()
+        return Array(lines)
+    }
+    
+    private func parsePositions(_ separatorLine: String) -> [(start: String.Index, end: String.Index)] {
+        
+        return parsePositions(separatorLine, offset: separatorLine.startIndex)
+    }
+    
+    private func parsePositions(_ separatorLine: String, offset: String.Index, positions: [(start: String.Index, end: String.Index)] = Array()) -> [(start: String.Index, end: String.Index)] {
+        var newArray = Array(positions)
+        
+        guard let start = separatorLine[offset...].firstIndex(of: "-") else {
+            return newArray;
+        }
+        
+        guard let end = separatorLine.firstIndex(of: " "),
+              let nextHyphen = separatorLine[end...].firstIndex(of: "-")
+        else {
+            newArray = newArray.append((start, separatorLine.endIndex))
+            return newArray
+        }
+        
+        newArray.append((start, separatorLine.index(before: nextHyphen)))
+        return newArray
+    }
+    
+    private func parseHeader(_ line: String) -> [String] {
+        return Array();
     }
 }
