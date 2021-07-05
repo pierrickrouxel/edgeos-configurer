@@ -48,7 +48,7 @@ class EdgeOsClient {
         return output
     }
     
-    private func parseLines(_ output: String) -> [Dictionary<String?, String?>] {
+    private func parseLines(_ output: String) -> [[String?: String?]] {
         let lines = output.components(separatedBy: "\n").filter { line in
             !line.trimmingCharacters(in: .whitespaces).isEmpty
         }
@@ -57,28 +57,29 @@ class EdgeOsClient {
             return []
         }
         
-        let columnRanges = getColumnRanges(lines[separatorLineIndex])
-        let columnTitles = getColumnValues(lines[lines.index(before: separatorLineIndex)], columnRanges: columnRanges);
         let bodyLines = lines[lines.index(after: separatorLineIndex)...]
         
-        return bodyLines
-            .map { line -> [String?: String?] in
-                let columnValues = getColumnValues(line, columnRanges: columnRanges)
-                return columnTitles.enumerated().reduce([:]) { columns, sequence in
-                    return columns.merging([sequence.element: columnValues[sequence.offset]]) { (current, _) in current }
-                }
+        let columnDescriptors = getColumnDescriptors(lines, separatorLineIndex: separatorLineIndex)
+        
+        return bodyLines.map { line in
+            columnDescriptors.reduce([:]) { (columns, entry) in
+                columns.merging([entry.value: getColumnValue(line, columnRange: entry.key)]) { $1 }
             }
+        }
+    }
+    
+    private func getColumnDescriptors(_ lines: [String], separatorLineIndex: Int) -> [Range<String.Index>: String?] {
+        let columnRanges = getColumnRanges(lines[separatorLineIndex])
+        let titleLine = lines[lines.index(before: separatorLineIndex)]
+        
+        return columnRanges.reduce([:]) { description, range in
+            description.merging([range: getColumnValue(titleLine, columnRange: range)]) { $1 }
+        }
     }
     
     private func getSeparatorLineIndex(_ lines: [String]) -> Int? {
         lines.firstIndex { line in
             line.range(of: "^[ -]+$", options: .regularExpression) != nil
-        }
-    }
-    
-    private func getColumnValues(_ line: String, columnRanges: [Range<String.Index>]) -> [String?] {
-        return columnRanges.map { columnRange in
-            return getColumnValue(line, columnRange: columnRange)
         }
     }
     
