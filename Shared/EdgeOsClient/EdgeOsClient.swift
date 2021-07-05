@@ -28,7 +28,7 @@ class EdgeOsClient {
         try ssh?.authenticate(username: username, password: password)
     }
     
-    func showInterfaces() throws -> [String] {
+    func showInterfaces() throws -> [Dictionary<String?, String?>] {
         let interfacesOutput = try execute("vbash -ic \"show interfaces\"")
         
         return parseLines(interfacesOutput)
@@ -48,35 +48,70 @@ class EdgeOsClient {
         return output
     }
     
-    private func parseLines(_ output: String) -> [String] {
-        let lines = output.components(separatedBy: "\n").dropFirst()
-        return Array(lines)
+    private func parseLines(_ output: String) -> [Dictionary<String?, String?>] {
+        let lines = output.components(separatedBy: "\n").filter { line in
+            !line.trimmingCharacters(in: .whitespaces).isEmpty
+        }
+        
+        let separatorLineIndex = lines.firstIndex { line in
+            return line.range(of: "^[ -]+$", options: .regularExpression) != nil
+        }
+        
+        if (separatorLineIndex == nil) {
+            return Array()
+        }
+
+        var result: [Dictionary<String?, String?>] = []
+        
+        let columnRanges = getColumnRanges(lines[separatorLineIndex!])
+        let columnTitles = getColumnValues(lines[lines.index(before: separatorLineIndex!)], columnRanges: columnRanges);
+        let bodyLines = lines[lines.index(after: separatorLineIndex!)...]
+        bodyLines
+            .forEach { line in
+                let columnValues = getColumnValues(line, columnRanges: columnRanges);
+                columnTitles.enumerated().forEach { index, columnTitle in
+                    result.append([columnTitle: columnValues[index]])
+                }
+            }
+        return result
     }
     
-    private func parsePositions(_ separatorLine: String) -> [(start: String.Index, end: String.Index)] {
-        
-        return parsePositions(separatorLine, offset: separatorLine.startIndex)
+    private func getColumnValues(_ line: String, columnRanges: [ClosedRange<String.Index>]) -> [String?] {
+        return columnRanges.map { columnRange in
+            return getColumnValue(line, columnRange: columnRange)
+        }
     }
     
-    private func parsePositions(_ separatorLine: String, offset: String.Index, positions: [(start: String.Index, end: String.Index)] = Array()) -> [(start: String.Index, end: String.Index)] {
-        var newArray = Array(positions)
+    private func getColumnValue(_ line: String, columnRange: ClosedRange<String.Index>) -> String? {
+        guard !line.isEmpty &&
+                line.startIndex <= columnRange.lowerBound &&
+                line.endIndex >= columnRange.upperBound
+        else {
+            return nil
+        }
         
+        let value = String(line[columnRange]).trimmingCharacters(in: .whitespaces)
+        
+        return value.isEmpty ? nil : value
+    }
+    
+    private func getColumnRanges(_ separatorLine: String) -> [ClosedRange<String.Index>] {
+        return getColumnRanges(separatorLine, offset: separatorLine.startIndex)
+    }
+    
+    private func getColumnRanges(_ separatorLine: String,
+                                 offset: String.Index,
+                                 positions: [ClosedRange<String.Index>] = Array()) -> [ClosedRange<String.Index>] {
         guard let start = separatorLine[offset...].firstIndex(of: "-") else {
-            return newArray;
+            return positions;
         }
         
         guard let end = separatorLine.firstIndex(of: " "),
               let nextHyphen = separatorLine[end...].firstIndex(of: "-")
         else {
-            newArray = newArray.append((start, separatorLine.endIndex))
-            return newArray
+            return positions + [start...separatorLine.endIndex]
         }
         
-        newArray.append((start, separatorLine.index(before: nextHyphen)))
-        return newArray
-    }
-    
-    private func parseHeader(_ line: String) -> [String] {
-        return Array();
+        return positions + [start...separatorLine.index(before: nextHyphen)]
     }
 }
