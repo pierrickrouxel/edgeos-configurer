@@ -39,7 +39,7 @@ class EdgeOsClient {
             throw EdgeOsClientError.notConnected
         }
         
-        let (status, output) = try ssh!.capture("vbash -ic \"show interfaces\"")
+        let (status, output) = try ssh!.capture(command)
         
         guard status == 0 else {
             throw EdgeOsClientError.executionFailed(status: status, output: output)
@@ -53,36 +53,36 @@ class EdgeOsClient {
             !line.trimmingCharacters(in: .whitespaces).isEmpty
         }
         
-        let separatorLineIndex = lines.firstIndex { line in
-            return line.range(of: "^[ -]+$", options: .regularExpression) != nil
+        guard let separatorLineIndex = getSeparatorLineIndex(lines) else {
+            return []
         }
         
-        if (separatorLineIndex == nil) {
-            return Array()
-        }
-
-        var result: [Dictionary<String?, String?>] = []
+        let columnRanges = getColumnRanges(lines[separatorLineIndex])
+        let columnTitles = getColumnValues(lines[lines.index(before: separatorLineIndex)], columnRanges: columnRanges);
+        let bodyLines = lines[lines.index(after: separatorLineIndex)...]
         
-        let columnRanges = getColumnRanges(lines[separatorLineIndex!])
-        let columnTitles = getColumnValues(lines[lines.index(before: separatorLineIndex!)], columnRanges: columnRanges);
-        let bodyLines = lines[lines.index(after: separatorLineIndex!)...]
-        bodyLines
-            .forEach { line in
-                let columnValues = getColumnValues(line, columnRanges: columnRanges);
-                columnTitles.enumerated().forEach { index, columnTitle in
-                    result.append([columnTitle: columnValues[index]])
+        return bodyLines
+            .map { line -> [String?: String?] in
+                let columnValues = getColumnValues(line, columnRanges: columnRanges)
+                return columnTitles.enumerated().reduce([:]) { columns, sequence in
+                    return columns.merging([sequence.element: columnValues[sequence.offset]]) { (current, _) in current }
                 }
             }
-        return result
     }
     
-    private func getColumnValues(_ line: String, columnRanges: [ClosedRange<String.Index>]) -> [String?] {
+    private func getSeparatorLineIndex(_ lines: [String]) -> Int? {
+        lines.firstIndex { line in
+            line.range(of: "^[ -]+$", options: .regularExpression) != nil
+        }
+    }
+    
+    private func getColumnValues(_ line: String, columnRanges: [Range<String.Index>]) -> [String?] {
         return columnRanges.map { columnRange in
             return getColumnValue(line, columnRange: columnRange)
         }
     }
     
-    private func getColumnValue(_ line: String, columnRange: ClosedRange<String.Index>) -> String? {
+    private func getColumnValue(_ line: String, columnRange: Range<String.Index>) -> String? {
         guard !line.isEmpty &&
                 line.startIndex <= columnRange.lowerBound &&
                 line.endIndex >= columnRange.upperBound
@@ -95,23 +95,19 @@ class EdgeOsClient {
         return value.isEmpty ? nil : value
     }
     
-    private func getColumnRanges(_ separatorLine: String) -> [ClosedRange<String.Index>] {
-        return getColumnRanges(separatorLine, offset: separatorLine.startIndex)
-    }
-    
-    private func getColumnRanges(_ separatorLine: String,
-                                 offset: String.Index,
-                                 positions: [ClosedRange<String.Index>] = Array()) -> [ClosedRange<String.Index>] {
-        guard let start = separatorLine[offset...].firstIndex(of: "-") else {
-            return positions;
+    private func getColumnRanges(_ separatorLine: String, offset: String.Index? = nil) -> [Range<String.Index>] {
+        let startIndex = offset ?? separatorLine.startIndex
+        
+        if !(separatorLine.startIndex..<separatorLine.endIndex).contains(startIndex) {
+            return []
         }
         
-        guard let end = separatorLine.firstIndex(of: " "),
-              let nextHyphen = separatorLine[end...].firstIndex(of: "-")
+        guard
+            let range = separatorLine.range(of: "^-+ *", options: .regularExpression, range: startIndex..<separatorLine.endIndex)
         else {
-            return positions + [start...separatorLine.endIndex]
+            return []
         }
         
-        return positions + [start...separatorLine.index(before: nextHyphen)]
+        return [range] + getColumnRanges(separatorLine, offset: range.upperBound)
     }
 }
