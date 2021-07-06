@@ -13,6 +13,9 @@
 		2D0EEB05268E150200849929 /* EdgeOsClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0EEB04268E150200849929 /* EdgeOsClientError.swift */; };
 		2D0EEB06268E150200849929 /* EdgeOsClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0EEB04268E150200849929 /* EdgeOsClientError.swift */; };
 		2D0EEB07268E150200849929 /* EdgeOsClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0EEB04268E150200849929 /* EdgeOsClientError.swift */; };
+		2D0EEB0A269472E600849929 /* EdgeOsInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0EEB09269472E600849929 /* EdgeOsInterface.swift */; };
+		2D0EEB0B269472E600849929 /* EdgeOsInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0EEB09269472E600849929 /* EdgeOsInterface.swift */; };
+		2D0EEB0C269472E600849929 /* EdgeOsInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0EEB09269472E600849929 /* EdgeOsInterface.swift */; };
 		2D4088E7267CC87F00B6C134 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4088E6267CC87F00B6C134 /* Tests_iOS.swift */; };
 		2D4088F2267CC87F00B6C134 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4088F1267CC87F00B6C134 /* Tests_macOS.swift */; };
 		2D4088F4267CC87F00B6C134 /* EdgeOsConfigurerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4088CB267CC87E00B6C134 /* EdgeOsConfigurerApp.swift */; };
@@ -51,6 +54,7 @@
 /* Begin PBXFileReference section */
 		2D0EEAFD268DD4B700849929 /* TestEdgeOsClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestEdgeOsClient.swift; sourceTree = "<group>"; };
 		2D0EEB04268E150200849929 /* EdgeOsClientError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgeOsClientError.swift; sourceTree = "<group>"; };
+		2D0EEB09269472E600849929 /* EdgeOsInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgeOsInterface.swift; sourceTree = "<group>"; };
 		2D4088CB267CC87E00B6C134 /* EdgeOsConfigurerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgeOsConfigurerApp.swift; sourceTree = "<group>"; };
 		2D4088CC267CC87E00B6C134 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2D4088CD267CC87F00B6C134 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -109,10 +113,19 @@
 		2D0EEB03268E14D100849929 /* EdgeOsClient */ = {
 			isa = PBXGroup;
 			children = (
+				2D0EEB082694728800849929 /* Models */,
 				2D408911267CEF9D00B6C134 /* EdgeOsClient.swift */,
 				2D0EEB04268E150200849929 /* EdgeOsClientError.swift */,
 			);
 			path = EdgeOsClient;
+			sourceTree = "<group>";
+		};
+		2D0EEB082694728800849929 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2D0EEB09269472E600849929 /* EdgeOsInterface.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		2D4088C5267CC87D00B6C134 = {
@@ -371,6 +384,7 @@
 				2D40890C267CCC0B00B6C134 /* OrangeService.swift in Sources */,
 				2D0EEB05268E150200849929 /* EdgeOsClientError.swift in Sources */,
 				2D408912267CEF9D00B6C134 /* EdgeOsClient.swift in Sources */,
+				2D0EEB0A269472E600849929 /* EdgeOsInterface.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,6 +398,7 @@
 				2D40890D267CCC0B00B6C134 /* OrangeService.swift in Sources */,
 				2D0EEB06268E150200849929 /* EdgeOsClientError.swift in Sources */,
 				2D408913267CEF9D00B6C134 /* EdgeOsClient.swift in Sources */,
+				2D0EEB0B269472E600849929 /* EdgeOsInterface.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,6 +414,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D0EEB0C269472E600849929 /* EdgeOsInterface.swift in Sources */,
 				2D0EEB00268DD77E00849929 /* EdgeOsClient.swift in Sources */,
 				2D0EEAFE268DD4B700849929 /* TestEdgeOsClient.swift in Sources */,
 				2D0EEB07268E150200849929 /* EdgeOsClientError.swift in Sources */,
