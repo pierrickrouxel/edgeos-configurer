@@ -16,6 +16,9 @@
 		2D0EEB0A269472E600849929 /* EdgeOsInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0EEB09269472E600849929 /* EdgeOsInterface.swift */; };
 		2D0EEB0B269472E600849929 /* EdgeOsInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0EEB09269472E600849929 /* EdgeOsInterface.swift */; };
 		2D0EEB0C269472E600849929 /* EdgeOsInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0EEB09269472E600849929 /* EdgeOsInterface.swift */; };
+		2D0EEB0E2697164800849929 /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0EEB0D2697164700849929 /* FormView.swift */; };
+		2D0EEB0F2697164800849929 /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0EEB0D2697164700849929 /* FormView.swift */; };
+		2D0EEB102697164800849929 /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0EEB0D2697164700849929 /* FormView.swift */; };
 		2D4088E7267CC87F00B6C134 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4088E6267CC87F00B6C134 /* Tests_iOS.swift */; };
 		2D4088F2267CC87F00B6C134 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4088F1267CC87F00B6C134 /* Tests_macOS.swift */; };
 		2D4088F4267CC87F00B6C134 /* EdgeOsConfigurerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4088CB267CC87E00B6C134 /* EdgeOsConfigurerApp.swift */; };
@@ -55,6 +58,7 @@
 		2D0EEAFD268DD4B700849929 /* TestEdgeOsClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestEdgeOsClient.swift; sourceTree = "<group>"; };
 		2D0EEB04268E150200849929 /* EdgeOsClientError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgeOsClientError.swift; sourceTree = "<group>"; };
 		2D0EEB09269472E600849929 /* EdgeOsInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgeOsInterface.swift; sourceTree = "<group>"; };
+		2D0EEB0D2697164700849929 /* FormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
 		2D4088CB267CC87E00B6C134 /* EdgeOsConfigurerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgeOsConfigurerApp.swift; sourceTree = "<group>"; };
 		2D4088CC267CC87E00B6C134 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2D4088CD267CC87F00B6C134 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -151,6 +155,7 @@
 				2D4088CD267CC87F00B6C134 /* Assets.xcassets */,
 				2D408908267CCA2F00B6C134 /* OrangeAccountModel.swift */,
 				2D40890B267CCC0B00B6C134 /* OrangeService.swift */,
+				2D0EEB0D2697164700849929 /* FormView.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -378,6 +383,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D0EEB0E2697164800849929 /* FormView.swift in Sources */,
 				2D408909267CCA2F00B6C134 /* OrangeAccountModel.swift in Sources */,
 				2DC4E1D52681D776005A9218 /* ContentView.swift in Sources */,
 				2D4088F4267CC87F00B6C134 /* EdgeOsConfigurerApp.swift in Sources */,
@@ -392,6 +398,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D0EEB0F2697164800849929 /* FormView.swift in Sources */,
 				2D40890A267CCA2F00B6C134 /* OrangeAccountModel.swift in Sources */,
 				2D4088F7267CC87F00B6C134 /* ContentView.swift in Sources */,
 				2D4088F5267CC87F00B6C134 /* EdgeOsConfigurerApp.swift in Sources */,
@@ -414,6 +421,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D0EEB102697164800849929 /* FormView.swift in Sources */,
 				2D0EEB0C269472E600849929 /* EdgeOsInterface.swift in Sources */,
 				2D0EEB00268DD77E00849929 /* EdgeOsClient.swift in Sources */,
 				2D0EEAFE268DD4B700849929 /* TestEdgeOsClient.swift in Sources */,

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct EdgeOsInterface {
+struct EdgeOsInterface: Hashable {
     let interface: String?
     let ipAddress: String?
 }
